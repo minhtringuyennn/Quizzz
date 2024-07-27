@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quiz Platform
 
-## Getting Started
+## Features
 
-First, run the development server:
+- Admin can log in and fetch questions.
+- Clients can participate in polls and submit their answers.
+- Real-time updates for poll results and quiz outcomes.
+- Reconnection logic to ensure continuous connectivity.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Frontend:** React, TailwindCSS, Recharts, WebSockets
+- **Backend:** Node.js, Express, Socket.io
+- **Database:** MongoDB
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Clone the repository:**
 
-## Learn More
+2. **Install dependencies:**
 
-To learn more about Next.js, take a look at the following resources:
+3. **Set up the environment variables:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   Create a `.env` file in the root directory and add your MongoDB connection string:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```env
+   MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
+   ```
 
-## Deploy on Vercel
+4. **Start the development server:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Start the server:**
+
+2. **Open the application in your browser:**
+
+   ```bash
+   http://localhost:3000
+   ```
+
+3. **Admin Login:**
+
+   - Use the predefined admin key to log in as an admin.
+   - Fetch questions and manage polls.
+
+4. **Client Participation:**
+
+   - Clients can join the quiz, see the questions, and participate in the polls.
+   - Poll results are displayed in real-time using a bar chart.
+
+## Database
+
+The database is a JSON dump from a Udemy course. Ensure that you import the JSON dump into your MongoDB instance.
